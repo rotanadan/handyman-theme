@@ -4289,7 +4289,7 @@ h6 {
   padding: 84px 0;
   background-image: url('images/herob.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top right;
   color: #FFF;
 }
 @media screen and (min-width: 1200px) {
@@ -4347,6 +4347,19 @@ h6 {
   float: left;
   font-size: 27px;
   padding: 0 14px 4px 0;
+}
+.olylena {
+  color: #FFF;
+  background: #0d1d3b;
+  padding: 30px 0;
+}
+.olylena h1,
+.olylena h2,
+.olylena h3,
+.olylena h4,
+.olylena h5,
+.olylena h6 {
+  color: #FFF;
 }
 footer.site-footer {
   padding: 24px 0;

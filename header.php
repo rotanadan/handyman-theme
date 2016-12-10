@@ -89,7 +89,8 @@
 
 
 	</header><!-- #masthead -->
-	<?php if(is_front_page()){ ?>
+	<?php $curpage= get_the_ID();
+	  if(is_front_page() || $curpage == 169){ ?>
 <div class="hero-section text-center">
 	<div class="wrapper">
 <div class="hero-text">
