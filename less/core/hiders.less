@@ -1,0 +1,49 @@
+//Fix forcing display block while hiding elements
+
+.visible-xs {
+	@media (min-width: @screen-sm-min) {
+		display: none!important;
+	}
+}
+.visible-sm {
+	@media (min-width: @screen-md-min) {
+		display: none!important;
+	}
+	&-only {
+		@media (max-width: @screen-xs-max), (min-width: @screen-md-min) {
+			display: none!important;
+		}
+	}
+}
+.visible-md {
+	@media (min-width: @screen-lg-min) {
+		display: none!important;
+	}
+	&-only {
+		@media (max-width: @screen-sm-max), (min-width: @screen-lg-min) {
+			display: none!important;
+		}
+	}
+}
+.visible-lg {
+	&-only {
+		@media (max-width: @screen-md-max) {
+			display: none!important;
+		}
+	}
+}
+.hidden-xs {
+	@media (max-width: @screen-xs-max) {
+		display: none!important;
+	}
+}
+.hidden-sm {
+	@media (max-width: @screen-sm-max) {
+		display: none!important;
+	}
+}
+.hidden-md {
+	@media (max-width: @screen-md-max) {
+		display: none!important;
+	}
+}

@@ -1,0 +1,138 @@
+body {
+  overflow-x: hidden; //helps the negative margin issue
+}
+.flex {
+	  display: table-cell; // ie9
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: column;
+		flex-flow: column;
+}
+.boogiebox {
+	.flex();
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	margin-left: -@gutter-width;
+	padding: 0; //resets for menus
+	margin-top: 0; //resets for menus
+	margin-bottom: 0; //resets for menus
+	list-style: none; //resets for menus
+	.boogiebox{
+      margin-left:-@gutter-width;
+    }
+  &.justify {
+		&-end {
+          -ms-flex-pack: end;
+			justify-content: flex-end;
+          -webkit-justify-content: flex-end;
+		}
+		&-center {
+          -ms-flex-pack: center;
+			justify-content: center;
+          -webkit-justify-content: center;
+		}
+		&-bookends {
+          -ms-flex-pack: justify;
+			justify-content: space-between;
+          -webkit-justify-content: space-between;
+		  &-xs{
+			@media screen and(max-width: @screen-xs-max){
+			  -ms-flex-pack: justify;
+			  justify-content: space-between;
+			  -webkit-justify-content: space-between;
+			}
+		  }
+		}
+		&-evenaround {
+          -ms-flex-pack: distribute;
+			justify-content: space-around;
+          -webkit-justify-content: space-around;
+		}
+	}
+	&.align {
+		&-top {
+          -ms-flex-align: start;
+			align-items: flex-start;
+          -webkit-align-items: flex-start;
+		}
+		&-bottom {
+          -ms-flex-align: end;
+			align-items: flex-end;
+          -webkit-align-items: flex-end;
+		}
+		&-center {
+          -ms-flex-align: center;
+			align-items: center;
+          -webkit-align-items: center;
+		}
+		&-stretch {
+          -ms-flex-align: stretch;
+			align-content: stretch;
+          -webkit-align-content: stretch;
+		}
+	}
+	> * {
+      .flex-x(auto);//displays inline
+		width: auto; //overides widths
+		padding-left: @gutter-width;
+		min-width: 1px;
+		margin: 0; //resets and fixes menus too
+	}
+	&.full, .full {
+		flex: 1 100%;
+		width: 100%;
+	}
+	&.one-row {
+		flex-wrap: nowrap;
+      -webkit-flex-wrap: nowrap;
+	}
+	// Remove padding: 
+	&.butts-up {
+		margin-left: 0;
+		> * {
+			padding: 0;
+          .flex-x(auto); //displays inline
+		}
+	}
+	// Individual items vertical align
+	.v-align {
+		&-top {
+			align-self: flex-start;
+            -webkit-align-self: flex-start;
+		}
+		&-center {
+          -ms-flex-item-align:center; // IE10
+          -webkit-align-self: center; // Safari / iOS
+          align-self: center;
+		}
+		&-bottom {
+			align-self: flex-end;
+            -webkit-align-self: flex-end;
+		}
+		&-stretch {
+			align-self: stretch;
+            -webkit-align-self: stretch;
+		}
+	}
+
+  //force all to full width before media query
+  [class^="xs-box"],[class*="xs-box"],[class^="sm-box"],[class*="sm-box"],[class^="md-box"],[class*="md-box"],[class^="lg-box"],[class*="lg-box"] {
+    width: 100%;
+  }
+}
+
+/**
+ * Making a row layout, with one taking up all space except the other rows
+ */
+.fillbox {
+  justify-content: space-between;
+    .flex();
+    flex-direction: column;
+    .filler {
+          flex-grow: 1;
+          -webkit-flex-grow: 1;
+    }
+}

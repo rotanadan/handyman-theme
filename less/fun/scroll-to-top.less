@@ -1,0 +1,33 @@
+#scroll-top-link {
+  position: fixed;
+  border-radius: @scroll-to-top-border-radius;
+  height: @scroll-to-top-size;
+  width: @scroll-to-top-size;
+  line-height: @scroll-to-top-size;
+  text-decoration: none;
+  text-align: center;
+  opacity: 0;
+  right: 15px;
+  bottom: 72px;
+  z-index: @scroll-to-top-from-zindex;
+  visibility: hidden;
+  webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: @scroll-to-top-bkg;
+  color: @scroll-to-top-color;
+  border: 1px solid @scroll-to-top-border-color;
+  font-size: @scroll-to-top-font-size;
+  @media screen and (min-width: @screen-sm-min){
+
+  }
+    &:hover{
+      background-color: @scroll-to-top-hover-bkg;
+      color: @scroll-to-top-hover-color;
+      border: 1px solid @scroll-to-top-hover-border-color;
+    }
+}
+
+.scrolled #scroll-top-link {
+  opacity: 0.7;
+  visibility: visible;
+}

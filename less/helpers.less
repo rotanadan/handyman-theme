@@ -1,0 +1,239 @@
+/**
+ * Margins & Padding
+ */
+//margin cutters
+.chop-top {margin-top: 0!important;}
+.chop-bottom {margin-bottom: 0!important;}
+//margin creators 
+.breather-stack  {margin-top:@gutter-width!important; margin-bottom: @gutter-width!important;
+&-lil {margin-top: 10px!important; margin-bottom: 10px!important;}
+&-tiny {margin-top: 5px!important; margin-bottom: 5px!important;}
+}
+.breather-bottom {
+  margin-bottom: @gutter-width!important;
+  &-lil {margin-bottom: 5px!important;}
+}
+.breather-top {margin-top: @gutter-width!important;}
+.breather-left-to-right  {margin:0 @gutter-width!important;}
+.breather {margin:@gutter-width!important;}
+//padding creator
+.padder-stack {padding-top:@gutter-width!important; padding-bottom: @gutter-width!important;
+&-lil {padding-top: 10px!important; padding-bottom: 10px!important;}
+&-tiny {padding-top: 5px!important; padding-bottom: 5px!important;}
+}
+.padder-left-to-right {padding-left: @gutter-width!important; padding-right: @gutter-width!important;}
+.padder {padding: @gutter-width!important;
+&-lil {padding: 10px!important}
+&-tiny {padding: 5px!important}
+}
+.bump-right {margin-right: 5px!important;}
+.bump-left {margin-left: 5px!important;}
+
+/**
+ * Mobile & Stripe
+ */
+// wrapper breaker (false stripe, actually within wrapper on desktop)
+.mobile-only-stripe {
+  @media screen and (max-width: @screen-xs-max){
+    margin-left: -@gutter-width!important;
+    margin-right: -@gutter-width!important;
+  }
+  padding-left: @gutter-width!important;
+  padding-right: @gutter-width!important;
+}
+
+/**
+ * Colors
+ */
+.white {
+.colors(#fff, @link-color)
+}
+.off-white {
+  .colors(#ebf0f2, @link-color)
+}
+.black {
+.colors(#000, @link-color)
+}
+.off-black {
+  .colors(#241c27, @link-color)
+}
+.gray {
+  .colors(#888888, @link-color)
+}
+.muted {
+  .colors(#d5d5d5, @link-color)
+}
+.red {
+  .colors(@red, #fff)
+}
+.orange {
+  .colors(@orange, #fff)
+}
+.blue {
+  .colors(@blue, #fff)
+}
+.green {
+  .colors(@green, #fff);
+}
+
+
+/**
+ * images
+ */
+img {
+    max-width: 100%;
+    height:auto;
+	&.full {
+	    width: 100%;
+	}
+	&.seventy-five {
+	    width:75%;
+	}
+}
+
+/**
+ * floats
+ */
+.plop-left(@maxwidth: 50%; @minwidth: 400px) {
+  display: block;
+  margin: 0 auto (@gutter-width / 2);
+    @media screen and (min-width: @minwidth) {
+        float: left;
+        margin-right: @gutter-width;
+        max-width: @maxwidth;
+    }
+}
+.plop-right(@maxwidth: 50%; @minwidth: 400px) {
+    display: block;
+    margin: 0 auto (@gutter-width / 2);
+    @media screen and (min-width: @minwidth) {
+        float: right;
+        margin-left: @gutter-width;
+        max-width: @maxwidth;
+    }
+}
+.plop-left{
+  .plop-left();
+  &-border{
+    border: 2px solid #000000;
+    .plop-left();
+  }
+}
+.plop-right{
+  .plop-right();
+  &-border{
+    border: 2px solid #000000;
+    .plop-right();
+  }
+}
+
+/**
+ * Cursor
+ */
+// need a cursor?
+.pointer {
+  cursor: pointer;
+}
+
+/**
+ * Lists
+ */
+//underline stopper
+.no-line {
+  text-decoration: none;
+}
+//bullet stopper
+.kevlar {
+  list-style: none;
+}
+
+/**
+ * borders
+ */
+.borderless {
+  border: none;
+}
+
+/**
+ * Fonts / Type
+ */
+.italic {
+  font-style: italic;
+}
+.beanstalk {
+  text-transform: uppercase;
+}
+.small-type {
+  font-size: 75%;
+  font-weight: normal;
+}
+.large-type {
+  @media screen and (min-width: @screen-md-min){
+    font-size: 150%;
+  }
+}
+a.one-line {
+  white-space: nowrap;
+}
+.bold-spice{
+  font-weight: 600;
+}
+
+/**
+ * Wrapper breaker
+ */
+@media screen and (min-width: @screen-lg-min) {
+  .wrapper-breaker {
+    margin-left: -9999px!important;
+    margin-right: -9999px!important;
+  }
+}
+
+/**
+ * Responsive iFrame
+ */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/**
+ * Icon Love
+ */
+i.huge {font-size:40px;}
+i {
+  &.twitter-color { color: #00aced; }
+  &.facebook-color { color: #3b5998; }
+  &.googleplus-color { color:#dd4b39; }
+  &.pinterest-color { color: #cb2027; }
+}
+
+
+//FLEX AUTO HEIGHTS
+.fill-height-or-more {
+  .flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.fill-height-or-more > div {
+  @media screen and (min-width: @screen-sm-min) {
+    flex: 1 1 auto;
+    -webkit-flex: 1;
+    -ms-flex:1 1 auto;
+    .flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}

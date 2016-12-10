@@ -1,0 +1,72 @@
+// header
+header {
+	.social-icons {
+		li {
+			border-color: @header-top-border-color;
+			border-left-style: solid;
+			border-left-width: 1px;
+			&:hover {
+				background: @header-top-link-color;
+				color: @header-bkg;
+			}
+		}
+		li:first-child {
+			border-left: none;
+		}
+	}
+  .icons-phone{
+    a{
+      padding:0 18px 0 0;
+    }
+  }
+  .icons-directions{
+    a{
+      padding:0 0 0 18px;
+    }
+  }
+}
+
+// footer
+footer {
+	.social-icons {
+		a {
+			color: @social-footer-icons-color;
+		}
+	}
+}
+
+//general
+.social-icons {
+	a {
+		.transition(all, 0.3s);
+		//width: @social-icons-size;
+		line-height: @social-icons-size;
+		min-height: @social-icons-size;
+		display: inline-block;
+		text-align: center;
+	}
+	[class^="icons-"] a:hover,
+	[class*=" icons-"] a:hover {
+		color: #ffffff;
+	}
+	.icons-facebook a:hover {
+		// color: #fff;
+		background-color: #37589b
+	}
+	.icons-linkedin a:hover {
+		// color: #fff;
+		background-color: #419cca;
+	}
+	.icons-twitter a:hover {
+		// color: #fff;
+		background-color: #46d4fe;
+	}
+	.icons-gplus a:hover {
+		// color: #fff;
+		background-color: #de5a49;
+	}
+	// enter more as needed. Comment out what you don't want
+  i{
+    padding: 0 14px 0 0;
+  }
+}

@@ -1,0 +1,79 @@
+
+
+/* Overlay style */
+@media (max-width: @nav-mobile-max) {
+	.overlay {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: @nav-overlay-bkg;
+		
+		/* Menu style */
+		nav {
+			text-align: center;
+			position: relative;
+			top: 50%;
+			height: 60%;
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			ul {
+				list-style: none;
+				padding: 0;
+				margin: 0 auto;
+				display: inline-block!important;
+				height: 100%;
+				position: relative;
+				background: none!important;
+				li {
+					display: block;
+					height: @nav-percentage;
+					height: calc(100% / @total-menu-items);
+					min-height: @overlay-font-size;
+					-webkit-backface-visibility: hidden;
+					backface-visibility: hidden;
+					a {
+						font-size: @overlay-font-size;
+						font-weight: @overlay-font-weight;
+						display: block;
+						color: #fff;
+						.transition (color 0.2s);
+						:hover,:focus {
+							color: @overlay-font-hover;
+						}
+					}
+				}
+				ul {
+					display: none!important;
+				}
+			}
+		}
+	}
+
+	/* Effects */
+	.overlay-slidedown {
+		visibility: hidden;
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+		-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+		transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+		&.active {
+			visibility: visible;
+			-webkit-transform: translateY(0%);
+			transform: translateY(0%);
+			-webkit-transition: -webkit-transform 0.4s ease-in-out;
+			transition: transform 0.4s ease-in-out;
+		}
+	}
+
+	@media screen and (max-height: 30.5em) {
+		.overlay nav {
+			height: 70%;
+			font-size: (@overlay-font-size * 0.63);
+		}
+		.overlay ul li {
+			min-height: (@overlay-font-size * 0.63);
+		}
+	}
+}

@@ -1,0 +1,39 @@
+footer {
+	background: @footer-bkg;
+	color: @footer-text-color;
+	// padding: @footer-padding;
+	&, footer p {
+		font-size: @footer-text-size;
+	}
+	a {
+		color: @footer-link-color;
+	}
+	h3, h4, h5 {
+		color: @footer-heading-color;
+		font-size: @footer-heading-size;
+		text-transform: uppercase;
+		font-weight: @footer-heading-weight;
+		margin-top: 0;
+	}
+	&.bottombar {
+		background: @footer-bottom-bkg;
+		padding: 26px 0;
+		font-size: 0.8em;
+        color: #8d8d8d;
+        @media screen and (min-width: @screen-md-min){
+          padding: 34px 0;
+        }
+		a, ul a {
+			color: @footer-bottom-link-color;
+		}
+		ul.menu ul {
+			display: none; //hide submenus from same main menu module
+		}
+	}
+
+	//space out sections
+	section > div {
+		padding-top: @footer-padding;
+		padding-bottom: @footer-padding;
+	}
+}

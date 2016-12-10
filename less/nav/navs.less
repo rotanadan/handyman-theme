@@ -1,0 +1,234 @@
+// Top Menu
+.top-top {
+  padding: 9px 0 0 0;
+  display: inline-block;
+  ul{
+    padding:0;
+    margin: 0;
+    display: inline-block;
+    li{
+      display:inline-block;
+      a{
+        font-family: 'Noto Sans', sans-serif;
+        color:#FFF;
+        text-decoration: none;
+        padding:0 10px;
+      }
+    }
+  }
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	font-size: 14px;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	// font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+	&:hover {
+		color: #fff;
+	}
+	white-space: nowrap;
+}
+
+
+/* Background color change on Hover */
+nav a:hover, nav li li a { 
+	background-color: @menugray; 
+}
+.top-bottom nav li li {
+	font-size: 90%;
+	a {
+		border-top: 1px solid #666;
+		&:hover {
+			background-color: @Brand-Primary;
+		}
+	}
+	&:first-child a {
+		border-top:none;
+	}
+}
+nav>a:hover {
+	background-color: transparent;
+}
+
+@media screen and (min-width: @screen-tab){
+	// Funky border on parent nav 
+	nav>ul>li {
+		position:relative;
+		&.current-menu-item::after, &.current-menu-ancestor::after{
+			content:  ' ';
+			display: inline-block;
+			width: 28px;
+			height: 9px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -14px;
+			background-color: @Brand-Primary;
+		}
+		&.menu-item-8.current-menu-item::after {
+			display: none;
+		}
+	}
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px;
+	ul {
+		left: 100%;
+	} 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:auto;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	// left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li a {
+	-webkit-transition: all 0.5s; /* Safari */
+	transition: all 0.5s;
+}
+.deskmenu {
+	.menu > li a:after {
+		content:  '△';
+		display: inline-block;
+		-webkit-transform: rotate(90deg);
+	    -moz-transform: rotate(90deg);
+	    -o-transform: rotate(90deg);
+	    -ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	    margin-left: 10px;
+	    font-size: 15px;
+	}
+	.menu > li > a:hover:after {
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+	li > a:only-child:after { content: ''; margin-left: 0;}
+}
+
+
+
+// Add responsive menu tweaks
+.pushy-logo {
+  width: 50%;
+  max-width: 200px;
+  height: auto;
+  float: left;
+}
+//MOBILE MENU BUTTON
+.mobilemenubtn{
+  border:1px solid #FFF;
+  border-radius: 10px;
+  color:#FFF;
+  text-decoration: none;
+  display: block;
+  width: 124px;
+  height:@mobilemenubtnH;
+  margin-top: 10px;
+  @media screen and (max-width: 375px){
+  	margin-right:-5px;
+  }
+  &.nav {
+	width: 40%;
+	float: right;
+	margin-left: 5%;
+	margin-right: 5%;
+    line-height: 30px;
+    display: table;
+    border-bottom-color: #fff;
+    border-top-color: #fff;
+    .mobileleft, .mobileright {
+      float: none;
+      display: table-cell;
+      padding: 0 10px;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .mobileright {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 535px){
+    	line-height: 25px;
+    	height: 22px;
+    	margin: 5px;
+    	.mobileleft {
+    		display: none;
+    	}
+    	.mobileright {
+    		line-height: 10px;
+    		font-size: 20px;
+    	}
+    }
+  }
+  .mobileleft{
+    height:@mobilemenubtnH - 1;
+    text-align:center;
+    width: 50%;
+    float: left;
+    font-size: 18px;
+    padding: 6px 0 0 0;
+    border-right:solid 1px #fff;
+  }
+  .mobileright{
+    width: 48%;
+    float: right;
+    .hamburgerholder{
+      .hamburgerline{
+        display: block;
+        width:31px;
+        height:7px;
+        margin:4px auto 0;
+        background-color:#FFF;
+      }
+    }
+  }
+}

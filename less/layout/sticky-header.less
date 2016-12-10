@@ -1,0 +1,83 @@
+.sticky-header {
+	header {
+		position: fixed;
+		height: @sticky-header-height-mobile;
+		top: 0;
+		left: 0;
+		right: 0;
+        @media screen and (@screen-md-min){
+          height: @sticky-header-height;
+        }
+		.logo-image {
+			img {
+				max-height: 100%;
+				width: auto;
+			}
+		}
+      .topbar{
+        .toptopbox{
+          height:@sticky-header-top-height-mobile;
+          @media screen and (min-width: @screen-md-min){
+            height:@sticky-header-top-height;
+          }
+        }
+      }
+      .topmidbar{
+        .topmidbox{
+          height: @sticky-header-mid-height-mobile;
+          @media screen and (min-width: @screen-md-min){
+            height: @sticky-header-mid-height;
+          }
+        }
+      }
+      .topbottombar{
+        height: @sticky-header-bottom-height-mobile;
+        @media screen and (min-width: @screen-md-min){
+          height: @sticky-header-bottom-height;
+        }
+      }
+	}
+
+	main {
+		padding-top: @sticky-header-height-mobile;
+      @media screen and (min-width: @screen-md-min){
+        padding-top: @sticky-header-height;
+      }
+	}
+	&.scrolled {
+		header {
+			height: @sticky-header-scrolled-height-mobile;
+            @media screen and (min-width: @screen-md-min){
+              height: @sticky-header-scrolled-height;
+            }
+          .topbar{
+            .toptopbox{
+              height:@sticky-header-top-scrolled-height-mobile;
+              @media screen and (min-width: @screen-md-min){
+                height:@sticky-header-top-scrolled-height;
+              }
+            }
+          }
+          .topmidbar{
+            .topmidbox{
+              height: @sticky-header-mid-scrolled-height-mobile;
+              @media screen and (min-width: @screen-md-min){
+                height: @sticky-header-mid-scrolled-height;
+              }
+            }
+          }
+          .topbottombar{
+            height: @sticky-header-bottom-scrolled-height-mobile;
+            @media screen and (min-width: @screen-md-min){
+              height: @sticky-header-bottom-scrolled-height;
+            }
+          }
+		}
+		main {
+			padding-top: @sticky-header-scrolled-height-mobile;
+            @media screen and (min-width: @screen-md-min){
+              padding-top: @sticky-header-scrolled-height;
+            }
+		}
+	}
+} 

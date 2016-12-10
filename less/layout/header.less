@@ -1,0 +1,43 @@
+header {
+	background: @header-bkg;
+
+  @media screen and (min-width: @screen-md-min){
+
+  }
+
+  .site-title{
+	font-size: 20px;
+	text-align: left;
+	@media screen and (min-width:@screen-sm-min){
+	  text-align: center;
+	  font-size: 24px;
+	}
+	@media screen and (min-width:@screen-md-min){
+	  font-size: 28px;
+	}
+	@media screen and (min-width:@screen-lg-min){
+	  font-size: 30px;
+	}
+	a{
+	color:#FFF;
+	&:hover,&:focus,&:active{
+	  color:#FFF;
+	  text-decoration: none;
+	}
+
+  	}
+
+  }
+
+  .top-logos{
+	padding-top:6px;
+	color:#FFF;
+	font-weight: 600;
+	img{
+	  width:120px;
+	  //padding: 8px 0 0 0;
+	}
+
+  }
+
+}

@@ -1,0 +1,87 @@
+.m-container {
+  width: 300px;
+  display: block;
+  background: #FFF;
+  padding: 10px 0px;
+}
+
+.m-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.m-text {
+  font-size: 18px !important;
+  padding: 10px 10px 10px 5px !important;
+  display: block !important;
+  width: 300px !important;
+  border: 1px dotted rgba(0, 0, 0, 0.1) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.35) !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+.m-highlight {
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  background: #000;
+  opacity: 0.1;
+}
+
+.m-bar {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &:before, &:after {
+    content: '';
+    height: 2px;
+    width: 0px;
+    bottom: 1px;
+    position: absolute;
+    background: #3773eb;
+    transition: 0.2s ease all;
+  }
+
+  &:before {
+    left: 50%;
+  }
+
+  &:after {
+    right: 50%;
+  }
+}
+
+.m-desc {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+}
+
+.m-text:focus ~ .m-desc {
+  top: -20px;
+  font-size: 14px;
+  color: #3773eb;
+}
+
+.m-text:focus ~ .m-bar:before, .m-text:focus ~ .m-bar:after {
+  width: 50%;
+}
+
+.m-text:focus ~ .m-highlight {
+  transition: height 0.1s linear;
+  height: 100%;
+}

@@ -1,0 +1,125 @@
+//mobile
+nav.pushy{
+  ul{
+	margin:0;
+	padding:0;
+	li{
+		a{
+		  padding:8px 4px 8px 10px;
+		}
+  	}
+  }
+}
+
+
+// General styling
+nav.main-navigation .menu-menu-container > ul, nav.main-navigation .menu-menu-container > ul ul {
+	//padding: @top-nav-ul-padding;  //leave padding to A
+	margin: 0;
+  padding: 0;
+
+	background: @top-nav-bkg;
+	li {
+		list-style: none;
+		position: relative;
+		width: auto; //overides widths
+		a {
+			color: @top-nav-color;
+			padding: @top-nav-a-padding;
+			text-decoration: none;
+			&:hover {
+				background: @top-nav-hoverbkg;
+			}
+		}
+	}
+}
+
+//animation for rollover
+@keyframes fadeInFromNone {
+  0% {
+    display:none;
+    opacity: 0;
+  }
+
+  1% {
+    display: block ;
+    opacity: 0;
+  }
+
+  100% {
+    display: block ;
+    opacity: 1;
+  }
+}
+
+
+nav.main-navigation .menu-menu-container > ul {
+
+    li{ //Show child UL on hover for all li's
+      &:hover{
+        ul{
+          display: block;
+          -webkit-animation-duration: 0.5s;
+          -webkit-animation-name: fadeInFromNone;
+          animation-name: fadeInFromNone;
+          animation-duration: 0.5s;
+          z-index: 1;
+        }
+      }
+
+    }
+
+    a{  white-space: nowrap;display:block;}
+	> li {
+		display:inline-block;
+	  &:last-child{
+		background-color:green;
+	  }
+		&.active, &:hover {
+			background-color: @top-nav-sub-bkg;
+		}
+
+		//second level
+		> ul {
+            //width:200px;
+          display:none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			//opacity: 0;
+			z-index: -1;
+			//.transition(all 0.2s);
+
+			li {
+				&:first-child {
+					margin-top: 0;
+
+				}
+			}
+		}
+		ul {
+			background: @top-nav-sub-bkg;
+//			border: 1px solid @top-nav-sub-brdr;
+			//padding: @top-nav-sub-ul-padding; //leave padding to A
+              padding:0;
+			a {
+                padding:12px 15px;
+              font-size:13px;
+				color: @top-nav-sub-link-color;
+              &:hover{
+                background-color: @top-nav-sub-link-hover-bg-color;
+              }
+			}
+			ul {
+				display: none;
+			}
+		}
+	}
+	li li:hover ul, li li ul:hover {
+      display: table-cell; // ie9
+		display: flex;
+		position: absolute;
+		left: 100%;
+		top: 0;
+	}
+}

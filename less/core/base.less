@@ -1,0 +1,53 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.wrapper {
+	max-width: @wrapper-max+(@gutter-width*2);
+	margin: 0 auto;
+    padding: 0 @gutter-width;
+    position: relative;
+      .clearfix();
+      &.lil {
+        max-width: 900px;
+      } 
+}
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .2;
+  border: none;
+  cursor: pointer;
+}
+//mostly for use with animations
+.hidden{
+     opacity:0;
+}
+.visible{
+     opacity:1;
+}
+
+//clearfixing
+   .clearfix() {
+     &:before,
+     &:after {
+       content: " "; // 1
+       display: table; // 2
+     }
+     &:after {
+       clear: both;
+     }
+   }
+   .clearfix {
+     .clearfix();
+   }
