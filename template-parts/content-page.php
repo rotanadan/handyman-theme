@@ -6,7 +6,8 @@
  *
  * @package thehandymancan
  */
-
+$curpage= get_the_ID();
+if(!is_front_page() && $curpage != 169 && $curpage != 182){
 ?>
 
 <div class="wrapper">
@@ -46,3 +47,4 @@
 	</div>
 </div>
 </div>
+<?php } ?>

@@ -4323,6 +4323,9 @@ h6 {
   border-radius: 6px;
   background-color: green;
 }
+.entry-content {
+  padding: 30px 0;
+}
 .testimonials {
   padding: 30px 0;
   background-color: #0f4b7f;
