@@ -29,7 +29,20 @@
 <div class="site-overlay"></div>
 <nav class="pushy visible-tab pushy-left">
 	<div>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<?php
+		$curpage= get_the_ID();
+		$urlext='';
+		if($curpage == 169){
+			$urlext='-dex';
+			wp_nav_menu( array( 'menu' => 'Main Dex' ) );
+		}else if($curpage == 182){
+			$urlext='-angies';
+			wp_nav_menu( array( 'menu' => 'Main Angies' ) );
+		}else{
+			wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+		}
+
+		?>
 	</div>
 </nav>
 
@@ -62,7 +75,16 @@
 					<nav id="site-navigation" class="main-navigation" role="navigation">
 
 						<span class="hidden-xs">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+							<?php
+								if($curpage == 169){
+									wp_nav_menu( array( 'menu' => 'Main Dex' ) );
+							 }else if($curpage == 182){
+								wp_nav_menu( array( 'menu' => 'Main Angies' ) );
+							}else{
+									wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+								}
+
+							?>
 						</span>
 
 					</nav><!-- #site-navigation -->
@@ -108,7 +130,7 @@
 					</div>
 					<div class="sm-box fillbox">
 							<div class="cta-box filler">
-								<a class="btn" href="/contact-us">Contact us online!</a>
+								<a class="btn" href="/contact-us<?php echo $urlext; ?>">Contact us online!</a>
 							</div>
 
 
