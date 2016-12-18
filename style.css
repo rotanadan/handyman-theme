@@ -4322,6 +4322,13 @@ h6 {
 .hero-section .cta-boxes .cta-box a.btn {
   border-radius: 6px;
   background-color: green;
+  height: auto;
+}
+.hero-section .cta-boxes .cta-box a.btn:hover,
+.hero-section .cta-boxes .cta-box a.btn:focus,
+.hero-section .cta-boxes .cta-box a.btn:active {
+  color: #FFF;
+  text-decoration: none;
 }
 .entry-content {
   padding: 30px 0;
