@@ -17,11 +17,9 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-	<script
-		src="https://code.jquery.com/jquery-2.2.4.min.js"
-		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-		crossorigin="anonymous"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/boogie.min.js"></script>
+
+
+
 <?php wp_head(); ?>
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -37,7 +35,7 @@
 
 <body <?php body_class(); ?>>
 <div class="site-overlay"></div>
-<nav class="pushy visible-tab pushy-left">
+<nav class="pushy visible-tab pushy-right">
 	<div>
 		<?php
 		$curpage= get_the_ID();
