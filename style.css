@@ -4389,6 +4389,9 @@ h6 {
 .olylena h6 {
   color: #FFF;
 }
+.olylena iframe {
+  max-width: 100%;
+}
 footer.site-footer {
   padding: 24px 0;
   color: #FFF;
