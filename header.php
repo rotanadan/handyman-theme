@@ -68,7 +68,7 @@
 
 					</div>
 				</div>
-				<div class="sm-box-2x text-center">
+				<div class="sm-box-3x text-center">
 					<div class="site-branding">
 
 						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Inc<sup>&reg;</sup></a></h1>
@@ -97,7 +97,7 @@
 
 					</nav><!-- #site-navigation -->
 				</div>
-				<div class="sm-box top-logos text-right">
+				<div class="sm-box-2x top-logos text-right">
 					<?php
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
@@ -109,6 +109,8 @@
 					</a>
 					<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
 						<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
+					</a>
+					<a href="https://homeguide.com/mn/minneapolis/general-contractors/" title="General Contractors Minneapolis" target="_blank"><img src="//cdn.homeguide.com/assets/images/tmp/homeguide-2018.png" style="width:54px!important;" alt="General Contractors Minneapolis">
 					</a>
 
 				</div>
