@@ -97,7 +97,7 @@
 
 					</nav><!-- #site-navigation -->
 				</div>
-				<div class="sm-box-2x top-logos text-right">
+				<div class="md-box-3x top-logos text-right">
 					<?php
 					$description = get_bloginfo( 'description', 'display' );
 					if ( $description || is_customize_preview() ) : ?>
@@ -112,6 +112,7 @@
 					</a>
 					<a href="https://homeguide.com/mn/minneapolis/general-contractors/" title="General Contractors Minneapolis" target="_blank"><img src="//cdn.homeguide.com/assets/images/tmp/homeguide-2018.png" style="width:54px!important;" alt="General Contractors Minneapolis">
 					</a>
+					<a href="https://www.yelp.com/biz/the-handyman-can-saint-paul?osq=the+handy+man+can" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/old_stroke.png"></a>
 
 				</div>
 
