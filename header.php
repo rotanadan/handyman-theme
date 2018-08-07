@@ -34,6 +34,9 @@
 </head>
 
 <body <?php body_class(); ?>>
+	<style>
+		<?php include("crit.min.css"); ?>
+	</style>
 <div class="site-overlay"></div>
 <nav class="pushy visible-tab pushy-right">
 	<div>
@@ -59,65 +62,66 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<div class="wrapper">
-			<div class="boogiebox">
-				<div class="sm-box hidden-xs">
-					<div class="logoholder">
-
-						<img class="logo" src="/images/logobig-s.png"/>
-
-					</div>
-				</div>
-				<div class="sm-box-3x text-center">
-					<div class="site-branding">
-
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Inc<sup>&reg;</sup></a></h1>
-
-							<a class="visible-xs menu-btn" href="#">
-								<i class="fa fa-bars"></i>
-							</a>
-
-
-					</div><!-- .site-branding -->
-
-					<nav id="site-navigation" class="main-navigation" role="navigation">
-
-						<span class="hidden-xs">
-							<?php
-								if($curpage == 169){
-									wp_nav_menu( array( 'menu' => 'Main Dex' ) );
-							 }else if($curpage == 182){
-								wp_nav_menu( array( 'menu' => 'Main Angies' ) );
-							}else{
-									wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
-								}
-
-							?>
-						</span>
-
-					</nav><!-- #site-navigation -->
-				</div>
-				<div class="md-box-3x top-logos text-right">
-					<?php
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-						<?php
-					endif; ?>
-					<a href="http://www.bbb.org/minnesota/business-reviews/handyman-services/the-handyman-can-in-oakdale-mn-21002466#sthash.xTmyVKOi.xptt" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/bbb-logo.png" width="120" height="37">
-					</a>
-					<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
-						<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
-					</a>
-					<a href="https://homeguide.com/mn/minneapolis/general-contractors/" title="General Contractors Minneapolis" target="_blank"><img src="//cdn.homeguide.com/assets/images/tmp/homeguide-2018.png" style="width:54px!important;" alt="General Contractors Minneapolis">
-					</a>
-					<a href="https://www.yelp.com/biz/the-handyman-can-saint-paul?osq=the+handy+man+can" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/old_stroke.png"></a>
-
-				</div>
-
+		<div class="top-wrapper">
+			
+				
+			<div class="logoholder top-left hidden-xs">
+				.
+				<img class="logo" src="/images/logobig-s.png"/>
 
 			</div>
+				
+			<div class="top-middle">
+				<div class="site-branding">
+
+					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?> Inc<sup>&reg;</sup></a></h1>
+
+						<a class="visible-xs menu-btn" href="#">
+							<i class="fa fa-bars"></i>
+						</a>
+
+
+				</div><!-- .site-branding -->
+
+				<nav id="site-navigation" class="main-navigation" role="navigation">
+
+					<span class="hidden-xs text-center">
+						<?php
+							if($curpage == 169){
+								wp_nav_menu( array( 'menu' => 'Main Dex' ) );
+						 }else if($curpage == 182){
+							wp_nav_menu( array( 'menu' => 'Main Angies' ) );
+						}else{
+								wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
+							}
+
+						?>
+					</span>
+
+				</nav><!-- #site-navigation -->
+			</div>
+
+			<div class="top-logos text-right">
+				<?php
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+					<?php
+				endif; ?>
+				<a href="http://www.bbb.org/minnesota/business-reviews/handyman-services/the-handyman-can-in-oakdale-mn-21002466#sthash.xTmyVKOi.xptt" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/bbb-logo.png" width="120" height="37">
+				</a>
+				<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
+				</a>
+				<a href="https://homeguide.com/mn/minneapolis/general-contractors/" title="General Contractors Minneapolis" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/homeguide-2018.png" style="width:54px!important;" alt="General Contractors Minneapolis">
+				</a>
+				<a href="https://www.yelp.com/biz/the-handyman-can-saint-paul?osq=the+handy+man+can" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/old_stroke.png"></a>
+
+			</div>
+
+			<div class="clearfix"></div>
+
 		</div>
 
 
