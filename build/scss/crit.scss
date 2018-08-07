@@ -1,0 +1,62 @@
+// Extra small screen / phone
+$screen-xs-min:              480px;
+
+// Small screen / tablet
+$screen-sm-min:              768px;
+
+// Medium screen / desktop
+$screen-md-min:              992px;
+
+// Large screen / wide desktop
+$screen-lg-min:              1200px;
+
+
+.top-wrapper {
+	max-width: 1230px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.top-middle {
+	padding-left: 15px;
+	float: left;
+	width: 100%;
+}
+
+.top-logos {
+	background-color: #0f4b7f;
+	float: left;
+	width: 100%;
+	padding-right: 15px;
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	.top-left {
+		float: left;
+		width: 20%;
+	}
+	.top-middle {
+		float: left;
+		width: 80%;
+	}
+
+}
+
+@media screen and (min-width: $screen-md-min) {
+	.top-middle {
+		float: left;
+		width: 40%;
+	}
+	.top-logos {
+		float: left;
+		width: 40%;
+		background: #17a0ff;
+	}
+}
+
+.clearfix {
+	content: "";
+    clear: both;
+    display: table;
+}

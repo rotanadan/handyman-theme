@@ -18,6 +18,16 @@ module.exports = function (grunt) {
                 }
             },
         },
+        sass: {
+            dist: {
+                options: {
+                    style: 'compressed'
+                },
+                files: {
+                    '../crit.min.css': 'scss/crit.scss'
+                }
+            }
+        },
         watch: {
             less: {
                 files: ['less/**/*.less'], // which files to watch
@@ -28,6 +38,6 @@ module.exports = function (grunt) {
     });
 
     // Task definition
-    grunt.registerTask('compile', ['less']);
+    grunt.registerTask('compile', ['less','sass']);
     grunt.registerTask('default', ['compile', 'watch']);
 };
