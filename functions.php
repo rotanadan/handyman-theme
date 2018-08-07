@@ -16,6 +16,11 @@ if ( ! function_exists( 'thehandymancan_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function thehandymancan_setup() {
+
+	//remove emojis
+	remove_action('wp_head', 'print_emoji_detection_script', 7);
+	remove_action('wp_print_styles', 'print_emoji_styles');
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
