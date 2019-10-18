@@ -112,8 +112,7 @@
 				<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
 				</a>
-				<a href="https://homeguide.com/mn/minneapolis/general-contractors/" title="General Contractors Minneapolis" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/homeguide-2018.png" style="width:54px!important;" alt="General Contractors Minneapolis">
-				</a>
+				
 				<a href="https://www.yelp.com/biz/the-handyman-can-saint-paul?osq=the+handy+man+can" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/old_stroke.png"></a>
 
 			</div>
