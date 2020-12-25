@@ -127,27 +127,25 @@
 	  if(is_front_page() || $curpage == 169 || $curpage == 182){ ?>
 <div class="hero-section text-center">
 	<div class="wrapper">
-<div class="hero-text">
-				<h2>Basement to roof and beyond.<br> Large or small we do it all!</h2>
+		<div class="hero-text">
+			<h2>Now Specializing In:</h2>
+			<h3>- "HONEY-DO" Lists<br>
+			- Bathroom Facelifts</h3>
 
-				<h3>Serving the Twin Cities MN and Spooner WI areas.</h3>
-
-				<div class="boogiebox cta-boxes">
-					<div class="sm-box">
-						<div class="cta-box">
-							<i class="fa fa-phone"></i> Call us now!<br>
-							651-487-5606
-						</div>
-
-					</div>
-					<div class="sm-box fillbox">
-							<div class="cta-box filler">
-								<a class="btn" href="/contact-us<?php echo $urlext; ?>">Contact us online!</a>
-							</div>
-
-
+			<div class="boogiebox align-center cta-boxes">
+				<div class="sm-box">
+					<div class="cta-box">
+						<i class="fa fa-phone"></i> Call us now!<br>
+						Spooner WI (715) 406-4872<br>
+						St. Paul (651)-487-5606
 					</div>
 				</div>
+				<div class="sm-box fillbox">
+					<div class="cta-box filler">
+						<a class="btn" href="/contact-us<?php echo $urlext; ?>">Contact us online!</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
