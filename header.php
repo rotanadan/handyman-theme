@@ -64,9 +64,7 @@
 			
 				
 			<div class="logoholder top-left hidden-xs">
-				.
 				<img class="logo" src="/images/logobig-s.png"/>
-
 			</div>
 				
 			<div class="top-middle">
