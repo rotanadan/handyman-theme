@@ -140,8 +140,6 @@
 				</div>
 				<div class="sm-box fillbox">
 					<div class="cta-box filler">
-						<a class="btn" href="/product/handyman-services/<?php echo $urlext; ?>">Book an appointment!</a>
-						<br>or<br>
 						<a class="btn" href="/contact-us<?php echo $urlext; ?>">Contact us!</a>
 					</div>
 				</div>
