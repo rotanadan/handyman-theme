@@ -107,7 +107,7 @@
 				<a href="http://www.bbb.org/minnesota/business-reviews/handyman-services/the-handyman-can-in-oakdale-mn-21002466#sthash.xTmyVKOi.xptt" target="_blank">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/bbb-logo.png" width="120" height="37">
 				</a>
-				<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
+				<a>
 					<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
 				</a>
 				
