@@ -130,9 +130,6 @@
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 					<?php
 				endif; ?>
-				<a href="http://www.bbb.org/minnesota/business-reviews/handyman-services/the-handyman-can-in-oakdale-mn-21002466#sthash.xTmyVKOi.xptt" target="_blank">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/bbb-logo.png" width="120" height="37">
-				</a>
 				<a href="#" id="angiesButton">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
 				</a>
