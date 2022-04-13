@@ -69,5 +69,14 @@ if(is_front_page() || $curpage == 169 || $curpage == 182){ ?>
 
 <?php wp_footer(); ?>
 
+<script>
+jQuery("#angiesButton").click(function(){
+	jQuery("#angiesOverlay").css('display','block');
+});
+
+jQuery("#angiesOverlay").click(function(){
+	jQuery("#angiesOverlay").css('display','none');
+});
+	</script>
 </body>
 </html>
