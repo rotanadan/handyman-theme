@@ -47,7 +47,10 @@ if(is_front_page() || $curpage == 169 || $curpage == 182){ ?>
 					<h3>Check out our TV commercial!</h3>
 				</div>
 				<div class="sm-box">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/CM3K8_kVv2g?rel=0" frameborder="0" allowfullscreen></iframe>
+				<video width="100%" controls="">
+					<source src="/wp-content/themes/thehandymancan/images/ole-and-lena.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
 				</div>
 			</div>
 		</div>
