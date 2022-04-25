@@ -17,11 +17,13 @@
 $curpage= get_the_ID();
 if(is_front_page() || $curpage == 169 || $curpage == 182){ ?>
 <div class="mission-statement">
-	<div class="wrapper">
-	<h3>Mission Statement</h3>
-	<p>I Help People Shepard Their Property:<br>
-	The next owner can be assured of the integrity in craftsmanship and best materials have been performed to code.<br>
-	License #BC129693</p>
+	<div class="entry-content">
+		<div class="wrapper">
+		<h3>Mission Statement</h3>
+		<p>I Help People Shepard Their Property:<br>
+		The next owner can be assured of the integrity in craftsmanship and best materials have been performed to code.<br>
+		License #BC129693</p>
+		</div>
 	</div>
 </div>
 <div class="testimonials">
