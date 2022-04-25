@@ -35,6 +35,32 @@
 	<style>
 		<?php include("crit.min.css"); ?>
 	</style>
+
+<div id="angiesOverlay" style="display: none;">
+	<div id="angiesSummary">
+		<h3>325 Verified Angies List Reviews</h3>
+		<div class="boogiebox">
+			<div class="xs-box">
+				<h4>Ratings</h4>
+				<strong>5*</strong> 262<br>
+				<strong>4*</strong> 14<br>
+				<strong>3*</strong> 13<br>
+				<strong>2*</strong> 9<br>
+				<strong>1*</strong> 27
+			</div>
+			<div class="xs-box">
+				<h4>Ratings Details</h4>
+				<strong>Professionalism:</strong> 4.8<br>
+				<strong>Price:</strong> 4.4<br>
+				<strong>Responsiveness:</strong> 4.8<br>
+				<strong>Punctuality:</strong> 4.8<br>
+				<strong>Quality:</strong> 4.8<br>
+				<strong>Overall:</strong> 4.7
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="site-overlay"></div>
 <nav class="pushy visible-tab pushy-right">
 	<div>
@@ -104,15 +130,10 @@
 					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 					<?php
 				endif; ?>
-				<a href="http://www.bbb.org/minnesota/business-reviews/handyman-services/the-handyman-can-in-oakdale-mn-21002466#sthash.xTmyVKOi.xptt" target="_blank">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/bbb-logo.png" width="120" height="37">
-				</a>
-				<a href="https://www.angieslist.com/companylist/us/mn/oakdale/the-handyman-can%21%21%21%C2%AE-inc-reviews-92065.htm?cid=ssabadge" target="_blank">
+				<a href="#" id="angiesButton">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/asv-angies-list1.png" width="120" height="57">
 				</a>
-				
 				<a href="https://www.yelp.com/biz/the-handyman-can-saint-paul?osq=the+handy+man+can" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/old_stroke.png"></a>
-
 			</div>
 
 			<div class="clearfix"></div>
