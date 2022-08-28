@@ -33,6 +33,25 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+	<script>
+		jQuery(document).ready(function(){
+				if(jQuery("form").length){
+					jQuery("#work-phone").on( "change", formatPhone );
+					jQuery("#cell-phone").on( "change", formatPhone );
+					jQuery("#home-phone").on( "change", formatPhone );
+				}
+		});
+
+		function formatPhone(event) {
+			rawString =  event.target.value;
+			var digitsOnlyString = rawString.replace(/[^0-9]/g,'');
+
+			var firstThree = digitsOnlyString.substring(0, 3);
+			var middleThree = digitsOnlyString.substring(3, 6);
+			var lastFour = digitsOnlyString.substring(6, 10);
+			event.target.value = "("+firstThree+")"+" "+middleThree+"-"+lastFour;
+		}
+	</script>
 <?php
 get_sidebar();
 get_footer();
