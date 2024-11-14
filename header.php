@@ -157,8 +157,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				<div class="sm-box">
 					<div class="cta-box">
 						<i class="fa fa-phone"></i> Call us now!<br>
-						Spooner WI (715) 406-4872<br>
-						St. Paul (651)-487-5606
+						<a href="tel:7154064872">Spooner WI (715) 406-4872</a><br>
+						Text (651) 308-6011
 					</div>
 				</div>
 				<div class="sm-box fillbox">
