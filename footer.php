@@ -20,8 +20,8 @@ if(is_front_page() || $curpage == 169 || $curpage == 182){ ?>
 	<div class="entry-content">
 		<div class="wrapper">
 		<h3>Mission Statement</h3>
-		<p>I take care of your home as a shepard would care for his flock.<br>
-		Present and future owners can be assured of Integrity In Craftsmanship in accordance with local codes, and that premium materials have been installed.<br>
+		<p>A STEWARD OF YOUR PROPERTY, SERVICING YOUR HOME LIKE ITS MINE.<br>
+		Present and future owners are assured of Integrity In Craftsmanship in accordance with local codes, and that premium materials have been installed.<br>
 		John C. Thomas<br>
 		License #BC129693</p>
 		</div>
